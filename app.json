@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "projeto-andrade",
+    "slug": "projeto-andrade",
+    "scheme": "projeto-andrade",
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
