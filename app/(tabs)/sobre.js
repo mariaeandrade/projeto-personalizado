@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Linking, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Linking, ScrollView } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
@@ -85,12 +85,13 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flexGrow: 1,
-        backgroundColor: '#bbb4ba',
+        backgroundColor: '#3d0042',
         alignItems: 'center',
         justifyContent: 'center',
         gap: 20,
         paddingTop: 15,
         paddingBottom: 15,
+
     },
     header: {
         alignItems: 'center',
@@ -99,6 +100,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         borderRadius: 20,
         width: '90%',
+        backgroundColor: '#3d0042',
+        borderWidth: 5,
+        borderColor: '#ff96e5',
     },
     headerTitle: {
         fontSize: 28,
@@ -111,18 +115,22 @@ const styles = StyleSheet.create({
         marginTop: 2,
     },
     cardOne: {
-        backgroundColor: '#706e6e',
         borderRadius: 30,
         padding: 20,
         alignItems: 'center',
+        backgroundColor: '#3d0042',
+        borderWidth: 5,
+        borderColor: '#ff96e5',
     },
     cardTwo: {
-        backgroundColor: '#706e6e',
         borderRadius: 30,
         padding: 20,
         paddingLeft: 100,
         paddingRight: 100,
         alignItems: 'center',
+        backgroundColor: '#3d0042',
+        borderWidth: 5,
+        borderColor: '#ff96e5',
     },
     fotoPerfil: {
         width: 120,
@@ -158,26 +166,26 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     primeiroBotao: {
-        backgroundColor: '#706e6e',
+        backgroundColor: '#ff96e5',
         paddingVertical: 12,
         paddingHorizontal: 22,
         borderRadius: 25,
     },
     primeiroBotaoText: {
-        color: '#eea1e3',
+        color: '#3d0042',
         fontWeight: 'bold',
         fontSize: 14,
     },
     segundoBotao: {
         backgroundColor: 'transparent',
         borderWidth: 2,
-        borderColor: '#706e6e',
+        borderColor: '#ff96e5',
         paddingVertical: 10,
         paddingHorizontal: 22,
         borderRadius: 25,
     },
     segundoBotaoText: {
-        color: '#706e6e',
+        color: '#ff96e5',
         fontWeight: 'bold',
         fontSize: 14,
     },

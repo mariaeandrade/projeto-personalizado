@@ -34,7 +34,7 @@ export default function LessonsScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#fffdf7",
+    backgroundColor: "#3d0042",
   },
   container: {
     flex: 1,
@@ -44,12 +44,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: "800",
-    color: "#38003d",
+    color: "#ff96e5",
   },
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: "#5f1b59",
+    color: "#ff96e5",
   },
   list: {
     gap: 12,
@@ -60,7 +60,9 @@ const styles = StyleSheet.create({
     gap: 12,
     padding: 16,
     borderRadius: 18,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#3d0042",
+    borderWidth: 5,
+    borderColor: '#ff96e5',
   },
   badge: {
     width: 32,
@@ -71,11 +73,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "700",
     color: "#ffffff",
-    backgroundColor: "#da0bf5",
+    backgroundColor: "#ff96e5",
   },
   listText: {
     flex: 1,
     fontSize: 15,
-    color: "#3d0022",
+    color: "#ff96e5",
   },
 });
