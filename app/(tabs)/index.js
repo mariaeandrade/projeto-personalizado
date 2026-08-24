@@ -14,18 +14,17 @@ export default function HomeScreen() {
             style={styles.logo}
             resizeMode="contain"
           />
-          <Text style={styles.eyebrow}>React Native + Expo Router</Text>
-          <Text style={styles.title}>Seu app já nasce organizado</Text>
+          <Text style={styles.eyebrow}>Projeto Personalizado</Text>
+          <Text style={styles.title}>Bem-vindo ao meu App </Text>
           <Text style={styles.description}>
-            Estrutura pronta para o aluno focar em componentes, navegação e
-            lógica de negócio desde a primeira aula.
+           Projeto criado para ser usado de base nas aulas de mobile
           </Text>
         </View>
 
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>O que vem configurado</Text>
-          <Text style={styles.cardItem}>• JavaScript habilitado</Text>
-          <Text style={styles.cardItem}>• Rotas com expo-router</Text>
+          <Text style={styles.cardTitle}>O que pode ajudar</Text>
+          <Text style={styles.cardItem}>• Estrutura de codigo</Text>
+          <Text style={styles.cardItem}>• Cards e css</Text>
           <Text style={styles.cardItem}>• Abas e modal de exemplo</Text>
           <Text style={styles.cardItem}>• Scripts para Android, iOS e Web</Text>
         </View>
