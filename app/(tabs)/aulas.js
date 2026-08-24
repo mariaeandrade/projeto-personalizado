@@ -44,12 +44,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: "800",
-    color: "#3d2c00",
+    color: "#38003d",
   },
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: "#5f4b1b",
+    color: "#5f1b59",
   },
   list: {
     gap: 12,
@@ -71,11 +71,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "700",
     color: "#ffffff",
-    backgroundColor: "#f59e0b",
+    backgroundColor: "#da0bf5",
   },
   listText: {
     flex: 1,
     fontSize: 15,
-    color: "#3d2c00",
+    color: "#3d0022",
   },
 });

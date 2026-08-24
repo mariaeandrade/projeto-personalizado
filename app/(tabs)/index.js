@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     gap: 10,
     padding: 24,
     borderRadius: 24,
-    backgroundColor: "#0f62fe",
+    backgroundColor: "#fe0fea",
   },
   logo: {
     width: 120,
@@ -91,18 +91,18 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#102542",
+    color: "#381042",
   },
   cardItem: {
     fontSize: 15,
-    color: "#334e68",
+    color: "#663368",
   },
   button: {
     paddingVertical: 16,
     paddingHorizontal: 20,
     borderRadius: 16,
     alignItems: "center",
-    backgroundColor: "#102542",
+    backgroundColor: "#42103b",
   },
   buttonText: {
     fontSize: 16,

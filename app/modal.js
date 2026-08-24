@@ -5,7 +5,7 @@ export default function ModalScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <Text style={styles.title}>Modal pronta para uso</Text>
+        <Text style={styles.title}>Bem vindo</Text>
         <Text style={styles.description}>
           Use esta tela para mostrar detalhes, formulários ou ações rápidas sem
           sair do fluxo principal.

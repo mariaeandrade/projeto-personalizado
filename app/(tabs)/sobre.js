@@ -59,7 +59,7 @@ export default function App() {
 
                     <TouchableOpacity
                         style={styles.iconContainer}
-                        onPress={() => Linking.openURL('https://x.com/2016blonded')}>
+                        onPress={() => Linking.openURL('https://x.com/blondedpvt')}>
                         <AntDesign name="twitter" size={24} color="#eea1e3" />
                     </TouchableOpacity>
                 </View>
