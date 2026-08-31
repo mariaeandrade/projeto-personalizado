@@ -49,8 +49,8 @@ export default function TabsLayout() {
                     <Tabs.Screen
               name="api"
               options={{
-                  title: 'API',
-                  headerTitle: 'API',
+                  title: 'GET',
+                  headerTitle: 'GET',
               }}
           />
             <Tabs.Screen
@@ -58,6 +58,14 @@ export default function TabsLayout() {
               options={{
                   title: 'POST',
                   headerTitle: 'POST',
+              }}
+          />
+
+           <Tabs.Screen
+              name="delete"
+              options={{
+                  title: 'DELETE',
+                  headerTitle: 'DELETE',
               }}
           />
       </Tabs>
