@@ -21,48 +21,71 @@ const api = axios.create({
     }
 });
 
-export default function HeroisCriarScreen() {
+export default function FilmesCriarScreen() {
   const [titulo, setTitulo] = useState("");
-  const [descricao, setDescricao] = useState("");
-  const [status, setStatus] = useState("");
+  const [genero, setGenero] = useState("");
+  const [ano, setAno] = useState("");
   const [imagemUrl, setImagemUrl] = useState("");
   const [diretor, setDiretor] = useState("");
-  const [duracaoMinutos, setDuracaoMinutos] = useState("");
-  const [genero, setGenero] = useState("");
+  const [nota, setNota] = useState("");
+
 
   const [enviando, setEnviando] = useState(false);
 
   async function criarFilme() {
-    if (!titulo) {
-      Alert.alert("Preencha pelo menos o título.");
+    if (!titulo || !genero || !ano ||!diretor ||!nota ) {
+      Alert.alert("Preencha campos obrigatórios.");
       return;
     }
 
+    if (titulo.trim().length < 3 || titulo.trim().length > 120) {
+      Alert.alert("O titulo deve ter entre 3 e 120 caracteres");
+      return;
+    }
+
+    const anoNum = Number(ano);
+    const notaNum = Number(nota);
+
+    if (isNaN(anoNum)) {
+      Alert.alert("Ano invalido");
+      return;
+    }
+
+      if (isNaN(notaNum)) {
+      Alert.alert("Nota invalido");
+      return;
+    }
+
+    const urlFinal = imagemUrl.trim().startsWith("http")
+    ? imagemUrl.trim()
+    :"https://via.placeholder.com/300";
+
+  
     setEnviando(true);
     try {
-      const resposta = await api.post("/api/herois", {
-        title: titulo,
-        description: descricao,
-        status: status,
-        imageUrl: imagemUrl,
+      const resposta = await api.post("/api/filmes", {
+        title: titulo.trim(),
+        imageUrl: urlFinal,
         diretor: diretor,
-        duracaoMinutos: duracaoMinutos,
-        grupo_principal: genero,
+        genero: genero.trim(),
+        ano: anoNum,
+        nota: notaNum,
       });
 
       Alert.alert("Filme criado!", resposta.data.title);
       setTitulo("");
-      setDescricao("");
       setImagemUrl("");
       setDiretor("");
-      setDuracaoMinutos("");
       setGenero("");
+      setAno("");
+      setNota("");
     } catch (e) {
-      Alert.alert(
-        "Não deu pra criar o filme",
-        "A API respondeu com erro. Confere se todos os campos estão certinhos e tenta de novo."
-      );
-    } finally {
+
+      console.log("Erro ao criar filme", e.response?.data || e.message);
+Alert.alert(
+      "Não deu pra criar o filme",
+      e.response?.data?.message || "A API respondeu com erro. Confere se todos os campos estão certinhos e tenta de novo."
+    );    } finally {
       setEnviando(false);
     }
   }
@@ -82,22 +105,14 @@ export default function HeroisCriarScreen() {
           onChangeText={setTitulo}
           placeholder="Ex: Harry Potter"
         />
-
-        <Text style={styles.rotulo}>Descrição</Text>
+                <Text style={styles.rotulo}>Gênero</Text>
         <TextInput
           style={styles.campo}
-          value={descricao}
-          onChangeText={setDescricao}
-          placeholder="Ex:..."
+          value={genero}
+          onChangeText={setGenero}
+          placeholder="Ex: Fantasia"
         />
 
-         <Text style={styles.rotulo}>Status</Text>
-        <TextInput
-          style={styles.campo}
-          value={status}
-          onChangeText={setStatus}
-          placeholder="Ex: Lançado"
-        />
 
         <Text style={styles.rotulo}>URL da imagem</Text>
         <TextInput
@@ -107,7 +122,7 @@ export default function HeroisCriarScreen() {
           placeholder="Ex: /logo-white-semfundo.webp"
         />
 
-          <Text style={styles.rotulo}>diretor</Text>
+          <Text style={styles.rotulo}>Diretor</Text>
         <TextInput
           style={styles.campo}
           value={diretor}
@@ -115,21 +130,20 @@ export default function HeroisCriarScreen() {
           placeholder="Ex:..."
         />
 
-    
-        <Text style={styles.rotulo}>Duração</Text>
+                  <Text style={styles.rotulo}>Ano de Lançamento</Text>
         <TextInput
           style={styles.campo}
-          value={duracaoMinutos}
-          onChangeText={setDuracaoMinutos}
-          placeholder="Ex: ..."
+          value={ano}
+          onChangeText={setAno}
+          placeholder="Ex:..."
         />
 
-        <Text style={styles.rotulo}>Categoria</Text>
+                  <Text style={styles.rotulo}>Nota</Text>
         <TextInput
           style={styles.campo}
-          value={genero}
-          onChangeText={setGenero}
-          placeholder="Ex: Terror"
+          value={nota}
+          onChangeText={setNota}
+          placeholder="Ex:..."
         />
 
         <Pressable style={styles.botao} onPress={criarFilme} disabled={enviando}>
@@ -154,10 +168,10 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
 
-  rotulo: { fontSize: 13, fontWeight: "600", color: '#ffc4db', marginBottom: 4 },
+  rotulo: { fontSize: 13, fontWeight: "600", color: '#c4cfff', marginBottom: 4 },
   campo: {
     borderWidth: 1,
-    borderColor:  '#fdfcce',
+    borderColor:  '#616156',
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
@@ -171,4 +185,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   botaoTexto: { color: "white", fontWeight: "700" },
+
 });

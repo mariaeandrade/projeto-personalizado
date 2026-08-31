@@ -78,12 +78,10 @@ export default function FilmesListarScreen() {
                             
                             <View style={styles.info}>
                                 <Text style={styles.titulo}>{filme.title}</Text>
-                                <Text style={styles.categoria}>{filme.category}</Text>
-                                 <Text style={styles.status}>Status: {filme.status}</Text>
+                                <Text style={styles.categoria}>{filme.genero}</Text>
                                   <Text style={styles.director}>Diretor: {filme.diretor}</Text>
-                                   <Text style={styles.duracao}>Duração: {filme.duracao_minutos}</Text>
-                                    <Text style={styles.ano}>Ano: {filme.year}</Text>
-                                     <Text style={styles.origem}>Origem: {filme.origin}</Text>
+                                   <Text style={styles.duracao}>nota {filme.nota}</Text>
+                                    <Text style={styles.ano}>Ano: {filme.ano}</Text>
                             </View>
                         </View>
                     ))}
