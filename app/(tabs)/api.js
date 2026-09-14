@@ -3,7 +3,7 @@ import { View, Text, Image, ActivityIndicator, StyleSheet, ScrollView } from "re
 import axios from "axios" // lib usada pra fazer chamadas HTTP para API
 import { SafeAreaView } from "react-native-safe-area-context" // evita que conteudo fique embaixo do notch/barra do celular
 
-const API_KEY = "cv_hAfaSH2ToKc3BIlrb5DzbhIxkuxkaFqE8hsebUCpO8tznOq-rE_LHVTbz_-Nl8jB"
+const API_KEY = "cv_sdyvb9lO24ESc0bRoG07rNAtsLbVQS8Vtc_Vw66iRAUqcO8-Oziey1zNLAP9w1D5";
 
 
 const api = axios.create({

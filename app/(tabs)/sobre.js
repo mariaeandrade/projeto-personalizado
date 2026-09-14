@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Linking, ScrollView } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 
 export default function App() {
     return (

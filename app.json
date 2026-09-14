@@ -4,7 +4,9 @@
     "slug": "projeto-andrade",
     "scheme": "projeto-andrade",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-status-bar",
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true

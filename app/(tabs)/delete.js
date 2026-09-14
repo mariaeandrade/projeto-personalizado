@@ -15,7 +15,7 @@ import axios from "axios";
 // Em produção, uma chave de API não deveria morar direto no código do
 // app (dá pra extrair de qualquer APK/IPA instalado). Aqui, como é uma
 // API pública de estudo, deixamos direto no código pra simplificar.
-const API_KEY = "cv_hAfaSH2ToKc3BIlrb5DzbhIxkuxkaFqE8hsebUCpO8tznOq-rE_LHVTbz_-Nl8jB";
+const API_KEY = "cv_sdyvb9lO24ESc0bRoG07rNAtsLbVQS8Vtc_Vw66iRAUqcO8-Oziey1zNLAP9w1D5";
 
 // Mesma instância do axios usada nas outras telas, com o header já
 // configurado — toda chamada feita com "api" já sai autenticada.

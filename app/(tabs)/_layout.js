@@ -68,6 +68,15 @@ export default function TabsLayout() {
                   headerTitle: 'DELETE',
               }}
           />
+
+          
+           <Tabs.Screen
+              name="update"
+              options={{
+                  title: 'UPDATE',
+                  headerTitle: 'UPDATE',
+              }}
+          />
       </Tabs>
   );
 }
