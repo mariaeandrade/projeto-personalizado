@@ -112,13 +112,13 @@ export default function FilmesBuscarScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#f8fbff" },
+  safeArea: { flex: 1, backgroundColor: "#3d0042" },
   conteudo: { padding: 24, paddingBottom: 48 },
   header: { marginBottom: 16 },
-  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#102542" },
-  subtitulo: { fontSize: 14, color: "#5f6b7a", marginTop: 2 },
+  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#ff96e5" },
+  subtitulo: { fontSize: 14, color: "#ff4dd6", marginTop: 2 },
 
-  rotulo: { fontSize: 13, fontWeight: "600", color: "#334155", marginBottom: 4 },
+  rotulo: { fontSize: 13, fontWeight: "600", color: "#ffc5f1", marginBottom: 4 },
   linhaBusca: { flexDirection: "row", gap: 8, alignItems: "flex-start" },
   campo: {
     flex: 1,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   botao: {
-    backgroundColor: "#1565c0",
+    backgroundColor: "#ff4dd6",
     paddingHorizontal: 18,
     borderRadius: 8,
     alignItems: "center",
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   },
   botaoTexto: { color: "white", fontWeight: "700" },
 
-  erro: { color: "#c62828", marginTop: 12 },
+  erro: { color: "#ff4dd6", marginTop: 12 },
   avisoNaoEncontrado: { color: "#9a6700", marginTop: 16, fontStyle: "italic" },
 
   card: {

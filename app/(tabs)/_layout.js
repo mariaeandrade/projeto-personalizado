@@ -50,6 +50,14 @@ export default function TabsLayout() {
                   headerTitle: 'UPDATE',
               }}
           />
+
+                     <Tabs.Screen
+              name="id"
+              options={{
+                  title: 'ID',
+                  headerTitle: 'BUSCAR POR ID',
+              }}
+          />
       </Tabs>
   );
 }

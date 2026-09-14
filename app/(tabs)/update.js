@@ -208,14 +208,14 @@ const tituloFinal = resposta?.data?.data?.title ?? resposta?.data?.title ?? titu
 }
 
 const styles = StyleSheet.create({
-    safeArea: { flex: 1, backgroundColor: "#f8fbff" },
+    safeArea: { flex: 1, backgroundColor: "#3d0042" },
     conteudo: { padding: 24, paddingBottom: 48 },
     header: { marginBottom: 16 },
-    tituloPagina: { fontSize: 24, fontWeight: "800", color: "#102542" },
-    subtitulo: { fontSize: 14, color: "#5f6b7a", marginTop: 2 },
+    tituloPagina: { fontSize: 24, fontWeight: "800", color: "#ff96e5" },
+    subtitulo: { fontSize: 14, color: "#ff4dd6", marginTop: 2 },
 
-    instrucao: { fontSize: 14, color: "#334155", marginBottom: 8 },
-    erro: { color: "#c62828", marginTop: 12 },
+    instrucao: { fontSize: 14, color: "rgb(255, 77, 214)", marginBottom: 8 },
+    erro: { color: "#ff4dd6", marginTop: 12 },
 
     linha: {
         flexDirection: "row",
@@ -228,15 +228,15 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     linhaTitulo: { fontSize: 15, fontWeight: "700", color: "#102542" },
-    linhaSeta: { fontSize: 13, color: "#1565c0", fontWeight: "600" },
+    linhaSeta: { fontSize: 13, color: "#ff4dd6", fontWeight: "600" },
 
     voltar: { marginBottom: 16 },
-    voltarTexto: { color: "#1565c0", fontWeight: "700" },
+    voltarTexto: { color: "#fd74dd", fontWeight: "700" },
 
-    rotulo: { fontSize: 13, fontWeight: "600", color: "#334155", marginBottom: 4 },
+    rotulo: { fontSize: 13, fontWeight: "600", color: "#ff4dd6", marginBottom: 4 },
     campo: {
         borderWidth: 1,
-        borderColor: "#cbd5e1",
+        borderColor: "#ff4dd6",
         borderRadius: 8,
         paddingHorizontal: 12,
         paddingVertical: 10,
@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
     },
     botao: {
-        backgroundColor: "#1565c0",
+        backgroundColor: "#ff4dd6",
         paddingVertical: 14,
         borderRadius: 10,
         alignItems: "center",

@@ -93,7 +93,7 @@ export default function FilmesListarScreen() {
 const styles = StyleSheet.create({
     safeArea: { 
         flex: 1, 
-        backgroundColor: '#e3efff' 
+        backgroundColor: '#3d0042' 
     }, // ocupa a tela toda, cor de fundo clara
     
     conteudo: { 
@@ -108,17 +108,17 @@ const styles = StyleSheet.create({
     tituloPagina: { 
         fontSize: 24, 
         fontWeight: "800", 
-        color: '#5fb7ff' 
+        color: '#ff96e5' 
     }, // título grande e escuro
     
     subtitulo: { 
         fontSize: 14, 
-        color: "#5f6b7a", 
+        color: "#ff4dd6" , 
         marginTop: 2 
     }, // texto menor e mais claro, abaixo do título
 
     erro: { 
-        color: '#5fb7ff', 
+        color: '#ff96e5', 
         marginTop: 12 
     }, // texto de erro em vermelho
     
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
         flexDirection: "row", // imagem e texto lado a lado
         gap: 12, // espaço entre imagem e texto
         marginTop: 12, // espaço entre um card e outro
-        backgroundColor: "white",
+        backgroundColor: '#ffc5f1',
         borderRadius: 10, // cantos arredondados
         overflow: "hidden", // corta a imagem nos cantos arredondados do card
     },
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
         width: 64, 
         height: 64,
         margin: 20
-    }, // tamanho fixo da foto do herói
+    }, // tamanho fixo da foto do filme
     
     info: { 
         flex: 1, 
@@ -146,10 +146,10 @@ const styles = StyleSheet.create({
     titulo: { 
         fontSize: 16, 
         fontWeight: "700" 
-    }, // nome do herói em destaque
+    }, // nome do filme em destaque
     
     categoria: { 
         fontSize: 13, 
-        color: "#64748b" 
+        color: "#ff4dd6" 
     }, // categoria/ano em cinza, menor
 });

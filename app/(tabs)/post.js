@@ -155,23 +155,23 @@ Alert.alert(
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: '#e3efff'},
+  safeArea: { flex: 1, backgroundColor: '#3d0042'},
   conteudo: { padding: 24, paddingBottom: 48 },
   header: { marginBottom: 16 },
-  tituloPagina: { fontSize: 24, fontWeight: "800", color: '#5fb7ff' },
-  subtitulo: { fontSize: 14, color: "#5f6b7a", marginTop: 2 },
+  tituloPagina: { fontSize: 24, fontWeight: "800", color: '#ff96e5' },
+  subtitulo: { fontSize: 14, color: "#ff4dd6", marginTop: 2 },
   secao: {
     fontSize: 14,
     fontWeight: "700",
-    color: '#5fb7ff',
+    color: '#ff4dd6',
     marginTop: 8,
     marginBottom: 8,
   },
 
-  rotulo: { fontSize: 13, fontWeight: "600", color: '#c4cfff', marginBottom: 4 },
+  rotulo: { fontSize: 13, fontWeight: "600", color: '#ff4dd6', marginBottom: 4 },
   campo: {
     borderWidth: 1,
-    borderColor:  '#616156',
+    borderColor:  '#ff96e5',
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
@@ -179,11 +179,11 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   botao: {
-    backgroundColor: '#5fb7ff',
+    backgroundColor: '#ff4dd6',
     paddingVertical: 14,
     borderRadius: 10,
     alignItems: "center",
   },
-  botaoTexto: { color: "white", fontWeight: "700" },
+  botaoTexto: { color: "ff4dd6", fontWeight: "700" },
 
 });

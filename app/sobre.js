@@ -32,7 +32,7 @@ export default function App() {
 
                     <TouchableOpacity
                         style={styles.iconContainer}
-                        onPress={() => Linking.openURL('https://github.com/mariaeandrade')}>
+                        onPress={() => Linking.openURL('https://br.linkedin.com/in/maria-eduarda-andrade-6878a2349')}>
                         <AntDesign name="linkedin" size={24} color="#eea1e3" />
                     </TouchableOpacity>
 
@@ -67,8 +67,8 @@ export default function App() {
             <View style={styles.containerBotao}>
                 <TouchableOpacity
                     style={styles.primeiroBotao}
-                    onPress={() => alert('Portifolios disponiveis em breve')}>
-                    <Text style={styles.primeiroBotaoText}> Ver portifolio</Text>
+                    onPress={() => alert('Atividades disponiveis em breve')}>
+                    <Text style={styles.primeiroBotaoText}> Ver atividades</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity

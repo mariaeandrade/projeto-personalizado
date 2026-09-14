@@ -13,19 +13,19 @@ export default function ModalScreen() {
 
 
         <View style={styles.linksContainer}>
-          <Link href="/aulas" style={styles.linkButton}>
+          <Link href="/aulas" style={styles.botao}>
             <Text style={styles.texto}>Aulas</Text>
           </Link>
 
-          <Link href="/interface" style={styles.linkButton}>
+          <Link href="/interface" style={styles.botao}>
             <Text style={styles.texto}>Interface</Text>
           </Link>
 
-          <Link href="/exemplo" style={styles.linkButton}>
+          <Link href="/exemplo" style={styles.botao}>
             <Text style={styles.texto}>Exemplo</Text>
           </Link>
 
-          <Link href="/sobre" style={styles.linkButton}>
+          <Link href="/sobre" style={styles.botao}>
             <Text style={styles.texto}>Sobre</Text>
           </Link>
         </View>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   linksContainer: {
     gap: 12,
   },
-  linkButton: {
+  botao: {
     backgroundColor: "#3d0042",
     paddingVertical: 12,
     paddingHorizontal: 16,

@@ -132,11 +132,11 @@ export default function FilmesExcluirScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#f8fbff" },
+  safeArea: { flex: 1, backgroundColor: "#3d0042" },
   conteudo: { padding: 24, paddingBottom: 48 },
   header: { marginBottom: 16 },
-  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#102542" },
-  subtitulo: { fontSize: 14, color: "#5f6b7a", marginTop: 2 },
+  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#ff96e5" },
+  subtitulo: { fontSize: 14, color: "#ff4dd6", marginTop: 2 },
 
   erro: { color: "#c62828", marginTop: 12 },
   card: {
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   categoria: { fontSize: 13, color: "#64748b" },
 
   botaoExcluir: {
-    backgroundColor: "#c62828",
+    backgroundColor: "#ff96e5",
     paddingHorizontal: 14,
     paddingVertical: 8,
     borderRadius: 8,
