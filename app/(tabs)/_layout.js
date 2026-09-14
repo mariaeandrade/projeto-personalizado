@@ -18,34 +18,7 @@ export default function TabsLayout() {
                   headerTitle: 'Projeto Base',
               }}
           />
-          <Tabs.Screen
-              name="aulas"
-              options={{
-                  title: 'Aulas',
-                  headerTitle: 'Conteúdo',
-              }}
-          />
-          <Tabs.Screen
-              name="interface"
-              options={{
-                  title: 'Interface',
-                  headerTitle: 'Interface',
-              }}
-          />
-          <Tabs.Screen
-              name="exemplo"
-              options={{
-                  title: 'Exemplo',
-                  headerTitle: 'Exemplo',
-              }}
-          />
-          <Tabs.Screen
-              name="sobre"
-              options={{
-                  title: 'Sobre',
-                  headerTitle: 'Sobre',
-              }}
-          />
+
                     <Tabs.Screen
               name="api"
               options={{

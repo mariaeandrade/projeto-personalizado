@@ -1,15 +1,34 @@
 import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Link } from "expo-router";
 
 export default function ModalScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <Text style={styles.title}>Bem vindo</Text>
+        <Text style={styles.title}>Bem-vindo</Text>
         <Text style={styles.description}>
-          Use esta tela para mostrar detalhes, formulários ou ações rápidas sem
-          sair do fluxo principal.
+          Acesse os aplicativos  pelos links abaixo:
         </Text>
+
+
+        <View style={styles.linksContainer}>
+          <Link href="/aulas" style={styles.linkButton}>
+            <Text style={styles.texto}>Aulas</Text>
+          </Link>
+
+          <Link href="/interface" style={styles.linkButton}>
+            <Text style={styles.texto}>Interface</Text>
+          </Link>
+
+          <Link href="/exemplo" style={styles.linkButton}>
+            <Text style={styles.texto}>Exemplo</Text>
+          </Link>
+
+          <Link href="/sobre" style={styles.linkButton}>
+            <Text style={styles.texto}>Sobre</Text>
+          </Link>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -24,7 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
     justifyContent: "center",
-    gap: 12,
+    gap: 16,
   },
   title: {
     fontSize: 28,
@@ -35,5 +54,22 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     color: "#334e68",
+    marginBottom: 8,
+  },
+  linksContainer: {
+    gap: 12,
+  },
+  linkButton: {
+    backgroundColor: "#3d0042",
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  texto: {
+    color: "#ffffff",
+    fontSize: 16,
+    fontWeight: "600",
+    textAlign: "center",
   },
 });

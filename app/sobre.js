@@ -18,7 +18,7 @@ export default function App() {
             </View>
 
             <View style={styles.cardOne}>
-                <Image source={require('../../assets/eu.png')} style={styles.fotoPerfil} />
+                <Image source={require('../assets/eu.png')} style={styles.fotoPerfil} />
 
                 <Text style={styles.nome}> Maria Eduarda de Andrade</Text>
                 <Text style={styles.infos}> Profissional</Text>
@@ -45,7 +45,7 @@ export default function App() {
             </View>
 
             <View style={styles.cardTwo}>
-                <Image source={require('../../assets/cecilia.png')} style={styles.fotoPerfil} />
+                <Image source={require('../assets/cecilia.png')} style={styles.fotoPerfil} />
 
                 <Text style={styles.nome}> Duda</Text>
                 <Text style={styles.infos}> Pessoal </Text>
