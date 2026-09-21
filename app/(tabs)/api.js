@@ -1,9 +1,10 @@
 //importa as hooks e componentes
 
-import { React, useState, useEffect } from "react"
+import { React, useCallback, useState } from "react"
 import { View, Text, Image, ActivityIndicator, StyleSheet, ScrollView } from "react-native"
 import axios from "axios" // lib usada pra fazer chamadas HTTP para API
 import { SafeAreaView } from "react-native-safe-area-context" // evita que conteudo fique embaixo do notch/barra do celular
+import { useFocusEffect } from "expo-router"
 
 
 //config url base do projeto
@@ -62,9 +63,11 @@ export default function FilmesListarScreen() {
         }
     }
 
-    useEffect(() => {
-        buscarFilmes()
-    }, [])
+    useFocusEffect(
+        useCallback(() => {
+            buscarFilmes()
+        }, [])
+    )
 
 
     //renderiza td q foi feito acima

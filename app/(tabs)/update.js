@@ -100,9 +100,9 @@ export default function FilmesEditarScreen() {
                 title: titulo,
                 imageUrl: imagemUrl,
                 genero,
-                ano,
+                ano: anoNumerico,
                 diretor,
-                nota,
+                nota: notaNumerica,
             });
 
 

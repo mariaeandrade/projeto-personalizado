@@ -15,10 +15,10 @@ const API_KEY = "cv_sdyvb9lO24ESc0bRoG07rNAtsLbVQS8Vtc_Vw66iRAUqcO8-Oziey1zNLAP9
 
 
 const api = axios.create({
-    baseURL: "https://api-ds.codeverse.dev.br",
-    headers: {
-        "x-api-key": API_KEY // passo pelo header a key da API
-    }
+  baseURL: "https://api-ds.codeverse.dev.br",
+  headers: {
+    "x-api-key": API_KEY // passo pelo header a key da API
+  }
 });
 
 //um usestate para cada info dos filmes e "enviado" para controlar a renderizacao da pagina
@@ -37,11 +37,11 @@ export default function FilmesCriarScreen() {
 
   //valiacao no front, checa tds os campos vazios
   async function criarFilme() {
-    if (!titulo || !genero || !ano ||!diretor ||!nota ) {
+    if (!titulo || !genero || !ano || !diretor || !nota) {
       Alert.alert("Preencha campos obrigatórios.");
       return;
     }
-//coloca um limite pro titulo
+    //coloca um limite pro titulo
     if (titulo.trim().length < 3 || titulo.trim().length > 120) {
       Alert.alert("O titulo deve ter entre 3 e 120 caracteres");
       return;
@@ -57,17 +57,17 @@ export default function FilmesCriarScreen() {
       return;
     }
 
-      if (isNaN(notaNum)) {
+    if (isNaN(notaNum)) {
       Alert.alert("Nota invalido");
       return;
     }
 
     //se a url n comecar com http n da certo
     const urlFinal = imagemUrl.trim().startsWith("http")
-    ? imagemUrl.trim()
-    :"https://via.placeholder.com/300";
+      ? imagemUrl.trim()
+      : "https://via.placeholder.com/300";
 
-  
+
     //envia o filme criado, se der certo mostra uma msg de sucesso se n  der da msg de erro
     setEnviando(true);
     try {
@@ -90,16 +90,17 @@ export default function FilmesCriarScreen() {
     } catch (e) {
 
       console.log("Erro ao criar filme", e.response?.data || e.message);
-Alert.alert(
-      "Não deu pra criar o filme",
-      e.response?.data?.message || "A API respondeu com erro. Confere se todos os campos estão certinhos e tenta de novo."
-    );    } finally {
+      Alert.alert(
+        "Não deu pra criar o filme",
+        e.response?.data?.message || "A API respondeu com erro. Confere se todos os campos estão certinhos e tenta de novo."
+      );
+    } finally {
       setEnviando(false);
     }
   }
 
-  
-    //renderiza td q foi feito acima
+
+  /*renderiza td q foi feito acima */
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -116,7 +117,7 @@ Alert.alert(
           onChangeText={setTitulo}
           placeholder="Ex: Harry Potter"
         />
-                <Text style={styles.rotulo}>Gênero</Text>
+        <Text style={styles.rotulo}>Gênero</Text>
         <TextInput
           style={styles.campo}
           value={genero}
@@ -133,7 +134,7 @@ Alert.alert(
           placeholder="Ex: /logo-white-semfundo.webp"
         />
 
-          <Text style={styles.rotulo}>Diretor</Text>
+        <Text style={styles.rotulo}>Diretor</Text>
         <TextInput
           style={styles.campo}
           value={diretor}
@@ -141,7 +142,7 @@ Alert.alert(
           placeholder="Ex:..."
         />
 
-                  <Text style={styles.rotulo}>Ano de Lançamento</Text>
+        <Text style={styles.rotulo}>Ano de Lançamento</Text>
         <TextInput
           style={styles.campo}
           value={ano}
@@ -149,15 +150,13 @@ Alert.alert(
           placeholder="Ex:..."
         />
 
-                  <Text style={styles.rotulo}>Nota</Text>
+        <Text style={styles.rotulo}>Nota</Text>
         <TextInput
           style={styles.campo}
           value={nota}
           onChangeText={setNota}
           placeholder="Ex:..."
         />
-
-        //botao que confirma criacao do filme
 
         <Pressable style={styles.botao} onPress={criarFilme} disabled={enviando}>
           <Text style={styles.botaoTexto}>{enviando ? "Enviando..." : "Criar filme"}</Text>
@@ -168,7 +167,7 @@ Alert.alert(
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: '#3d0042'},
+  safeArea: { flex: 1, backgroundColor: '#3d0042' },
   conteudo: { padding: 24, paddingBottom: 48 },
   header: { marginBottom: 16 },
   tituloPagina: { fontSize: 24, fontWeight: "800", color: '#ff96e5' },
@@ -184,7 +183,7 @@ const styles = StyleSheet.create({
   rotulo: { fontSize: 13, fontWeight: "600", color: '#ff4dd6', marginBottom: 4 },
   campo: {
     borderWidth: 1,
-    borderColor:  '#ff96e5',
+    borderColor: '#ff96e5',
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
