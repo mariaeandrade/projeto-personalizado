@@ -21,6 +21,8 @@ const api = axios.create({
     }
 });
 
+//um usestate para cada info dos filmes e "enviado" para controlar a renderizacao da pagina
+
 export default function FilmesCriarScreen() {
   const [titulo, setTitulo] = useState("");
   const [genero, setGenero] = useState("");
@@ -32,20 +34,24 @@ export default function FilmesCriarScreen() {
 
   const [enviando, setEnviando] = useState(false);
 
+
+  //valiacao no front, checa tds os campos vazios
   async function criarFilme() {
     if (!titulo || !genero || !ano ||!diretor ||!nota ) {
       Alert.alert("Preencha campos obrigatórios.");
       return;
     }
-
+//coloca um limite pro titulo
     if (titulo.trim().length < 3 || titulo.trim().length > 120) {
       Alert.alert("O titulo deve ter entre 3 e 120 caracteres");
       return;
     }
 
+    //converte ano e nota para numero
     const anoNum = Number(ano);
     const notaNum = Number(nota);
 
+    //se n for numero, eh invalido
     if (isNaN(anoNum)) {
       Alert.alert("Ano invalido");
       return;
@@ -56,11 +62,13 @@ export default function FilmesCriarScreen() {
       return;
     }
 
+    //se a url n comecar com http n da certo
     const urlFinal = imagemUrl.trim().startsWith("http")
     ? imagemUrl.trim()
     :"https://via.placeholder.com/300";
 
   
+    //envia o filme criado, se der certo mostra uma msg de sucesso se n  der da msg de erro
     setEnviando(true);
     try {
       const resposta = await api.post("/api/filmes", {
@@ -89,6 +97,9 @@ Alert.alert(
       setEnviando(false);
     }
   }
+
+  
+    //renderiza td q foi feito acima
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -145,6 +156,8 @@ Alert.alert(
           onChangeText={setNota}
           placeholder="Ex:..."
         />
+
+        //botao que confirma criacao do filme
 
         <Pressable style={styles.botao} onPress={criarFilme} disabled={enviando}>
           <Text style={styles.botaoTexto}>{enviando ? "Enviando..." : "Criar filme"}</Text>

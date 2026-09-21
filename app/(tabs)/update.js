@@ -46,6 +46,8 @@ export default function FilmesEditarScreen() {
     const [nota, setNota] = useState("");
     const [salvando, setSalvando] = useState(false);
 
+    //mostra a lista completa de filmes assim como no GET
+
     async function buscarFilme() {
         setCarregando(true);
         setErro(null);
@@ -65,15 +67,17 @@ export default function FilmesEditarScreen() {
         buscarFilme();
     }, []);
 
+//qnd o cliente selecionar um filme, o sistema "guarda" o filme e mostra os dados originais dele
     function selecionarfilmes(filme) {
         setSelecionado(filme);
         setTitulo(filme.title ?? "");
         setImagemUrl(filme.imageUrl ?? "");
         setGenero(filme.genero ?? "");
-        setAno(filme.ano ?? "")
+        setAno(filme.ano != null ? String(filme.ano) : "")
         setDiretor(filme.diretor ?? "");
-        setNota(filme.nota ??  "");
+        setNota(filme.nota != null ? String(filme.nota) : "");
     }
+
 
     async function salvarEdicao() {
         if (!selecionado) return;
@@ -84,6 +88,10 @@ export default function FilmesEditarScreen() {
 
         setSalvando(true);
         try {
+
+            //transforma ano em numero, e nota em numero e em decimal
+              const anoNumerico = ano ? Number(ano) : null;
+            const notaNumerica = nota ? parseFloat(nota.replace(",", ".")) : null;
 
 
             // PUT substitui o registro inteiro mandamos todos os campos de

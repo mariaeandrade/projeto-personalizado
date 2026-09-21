@@ -1,8 +1,12 @@
+//importa as hooks e componentes
+
 import { React, useState, useEffect } from "react"
 import { View, Text, Image, ActivityIndicator, StyleSheet, ScrollView } from "react-native"
 import axios from "axios" // lib usada pra fazer chamadas HTTP para API
 import { SafeAreaView } from "react-native-safe-area-context" // evita que conteudo fique embaixo do notch/barra do celular
 
+
+//config url base do projeto
 const API_KEY = "cv_sdyvb9lO24ESc0bRoG07rNAtsLbVQS8Vtc_Vw66iRAUqcO8-Oziey1zNLAP9w1D5";
 
 
@@ -13,6 +17,7 @@ const api = axios.create({
     }
 })
 
+//auxilia o encaixe da imagem no celular
 async function resolverImageUrl(url) {
     if (!url || typeof url !== "string") return null
 
@@ -29,11 +34,13 @@ async function resolverImageUrl(url) {
     }
 }
 
+
 export default function FilmesListarScreen() {
     const [filmes, setFilmes] = useState([])
     const [carregando, setCarregando] = useState(true)
     const [erro, setErro] = useState(null)
 
+    //busca o filme com a imagem resolvida, se nao funcionar, mostra mensagem de erro 
     async function buscarFilmes() {
         setCarregando(true)
         setErro(null)
@@ -54,11 +61,13 @@ export default function FilmesListarScreen() {
             setCarregando(false)
         }
     }
-
+// faz c que isso rode so uma vez
     useEffect(() => {
         buscarFilmes()
     }, [])
 
+
+    //renderiza td q foi feito acima
     return (
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.conteudo}>

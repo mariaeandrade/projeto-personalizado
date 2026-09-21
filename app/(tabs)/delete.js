@@ -56,7 +56,7 @@ export default function FilmesExcluirScreen() {
     buscarFilmes();
   }, []);
 
-
+//manda o id na url e se der certo, usa .filter pra remover o item localmente e atualia na tela
     async function excluirFilme(id) {
     setExcluindoId(id);
     try {

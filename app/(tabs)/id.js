@@ -35,6 +35,7 @@ export default function FilmesBuscarScreen() {
   const [erro, setErro] = useState(null);
   const [naoEncontrado, setNaoEncontrado] = useState(false);
 
+
   async function buscarPorId() {
     if (!id) {
       setErro("Digite um id pra buscar.");
@@ -50,6 +51,8 @@ export default function FilmesBuscarScreen() {
     try {
       // Sem params e sem .data.data: a rota de um item só devolve o
       // próprio objeto do filme direto no corpo da resposta.
+
+      //verifica se o filme realmente existe e se nao der certo, da msg de erro
       const resposta = await api.get(`/api/filmes/${id}`);
       setFilme(resposta.data);
     } catch (e) {
@@ -63,6 +66,8 @@ export default function FilmesBuscarScreen() {
     }
   }
 
+  
+    //renderiza td q foi feito acima
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.conteudo}>
