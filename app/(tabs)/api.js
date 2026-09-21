@@ -61,7 +61,7 @@ export default function FilmesListarScreen() {
             setCarregando(false)
         }
     }
-// faz c que isso rode so uma vez
+
     useEffect(() => {
         buscarFilmes()
     }, [])
