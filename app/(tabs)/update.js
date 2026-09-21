@@ -70,9 +70,9 @@ export default function FilmesEditarScreen() {
         setTitulo(filme.title ?? "");
         setImagemUrl(filme.imageUrl ?? "");
         setGenero(filme.genero ?? "");
-        setAno(filme.ano != null ? String(filme.ano) : "")
+        setAno(filme.ano ?? "")
         setDiretor(filme.diretor ?? "");
-        setNota(filme.nota != null ? String(filme.nota) : "");
+        setNota(filme.nota ??  "");
     }
 
     async function salvarEdicao() {
@@ -85,22 +85,21 @@ export default function FilmesEditarScreen() {
         setSalvando(true);
         try {
 
-            const anoNumerico = ano ? Number(ano) : null;
-            const notaNumerica = nota ? parseFloat(nota.replace(",", ".")) : null;
-            // PUT substitui o registro inteiro — mandamos todos os campos de
+
+            // PUT substitui o registro inteiro mandamos todos os campos de
             // novo. O id vai na URL, não no corpo.
             const resposta = await api.put(`/api/filmes/${selecionado.id}`, {
                 title: titulo,
                 imageUrl: imagemUrl,
                 genero,
-                ano: anoNumerico,
+                ano,
                 diretor,
-                nota: notaNumerica
+                nota,
             });
 
 
             // Esta API devolve o registro atualizado dentro de "data".
-const tituloFinal = resposta?.data?.data?.title ?? resposta?.data?.title ?? titulo;
+            const tituloFinal = resposta?.data?.data?.title ?? resposta?.data?.title ?? titulo;
             Alert.alert("Sucesso!", `Filme "${tituloFinal}" atualizado com sucesso.`);
 
             setSelecionado(null);
